@@ -1,0 +1,471 @@
+﻿<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Telegram超级群组功能详解（5000人上限完整指南）</title>
+    <meta name="description" content="详细讲解Telegram超级群组（Supergroup）的功能与设置方法，包含5000人上限提升、权限管理、消息审核等高级功能。适用于2026年最新版Telegram。">
+    <meta name="keywords" content="Telegram超级群组,Telegram 5000人上限,Telegram群组升级,Telegram Supergroup,Telegram大规模群组管理">
+    <link rel="stylesheet" href="css/style.min.css">
+    <link rel="icon" href="images/favicon.svg" type="image/svg+xml">
+        <!-- Open Graph / Schema.org SEO -->
+    <meta property="og:site_name" content="TelegramClean">
+    <meta property="og:type" content="article">
+    <meta property="og:title" content="Telegram超级群组功能详解（5000人上限完整指南）">
+    <meta property="og:description" content="详细讲解Telegram超级群组（Supergroup）的功能与设置方法，包含5000人上限提升、权限管理、消息审核等高级功能。">
+    <meta property="og:url" content="https://telegramclean.com/article26.html">
+    <meta property="og:locale" content="zh_CN">
+    <link rel="canonical" href="https://telegramclean.com/article26.html">
+    <script type="application/ld+json">{"@context":"https://schema.org","@type":"Article","headline":"Telegram超级群组功能详解（5000人上限完整指南）","description":"详细讲解Telegram超级群组（Supergroup）的功能与设置方法，包含5000人上限提升、权限管理、消息审核等高级功能。","url":"https://telegramclean.com/article26.html","publisher":{"@type":"Organization","name":"TelegramClean","url":"https://telegramclean.com"},"datePublished":"2026-06-22","dateModified":"2026-06-22","author":{"@type":"Organization","name":"TelegramClean"},"articleSection":"群组消息管理","inLanguage":"zh-CN"}</script>
+
+</head>
+<body>
+    <!-- 顶部导航 -->
+    <nav class="navbar">
+        <div class="navbar-inner">
+            <a href="index.html" class="logo">TelegramClean</a>
+            <ul class="nav-links">
+                <li><a href="index.html">首页</a></li>
+                <li><a href="category1.html">自动删消息设置</a></li>
+                <li><a href="category2.html">私聊记录清理</a></li>
+                <li><a href="category3.html">群组消息管理</a></li>
+                <li><a href="category4.html">定时清理规则</a></li>
+                <li><a href="category5.html">聊天记录维护</a></li>
+            </ul>
+        </div>
+    </nav>
+    
+    <!-- 面包屑 -->
+    <div class="breadcrumb">
+        <a href="index.html">首页</a> &gt; <a href="category3.html">群组消息管理</a> &gt; 正文
+    </div>
+    
+    <!-- 文章容器 -->
+    <article class="article-container">
+        <header class="article-header">
+            <h1>Telegram超级群组功能详解（5000人上限完整指南）</h1>
+            <p class="article-meta">发布日期：2026-06-22 | 分类：群组消息管理 | 阅读时长：12分钟</p>
+        </header>        
+        <!-- 文章封面图 -->
+        <div class="article-cover">
+            <img src="/images/cover26.svg" alt="TelegramClean教程配图" width="800" height="450" loading="lazy">
+        </div>
+        
+        <!-- 目录导航 -->
+        <div class="table-of-contents">
+            <h2>📋 目录</h2>
+            <ul>
+                <li><a href="#intro">一、什么是Telegram超级群组？</a></li>
+                <li><a href="#upgrade">二、普通群组升级为超级群组步骤</a></li>
+                <li><a href="#limit">三、5000人上限详解与突破方法</a></li>
+                <li><a href="#permission">四、超级群组权限管理功能</a></li>
+                <li><a href="#audit">五、消息审核与慢速模式设置</a></li>
+                <li><a href="#pin">六、消息置顶与重要公告管理</a></li>
+                <li><a href="#statistics">七、群组统计数据分析</a></li>
+                <li><a href="#faq">八、常见问题解答</a></li>
+            </ul>
+        </div>
+        
+        <!-- 文章内容 -->
+        <div class="article-content">
+            <h2 id="intro">一、什么是Telegram超级群组？</h2>
+            <p>Telegram超级群组（Supergroup）是Telegram为大型社群设计的<strong>增强版群组功能</strong>。与普通群组相比，超级群组支持更多成员、更强大的管理工具和更丰富的功能配置。</p>
+            
+            <p><strong>超级群组的核心优势：</strong></p>
+            
+            <ul>
+                <li><strong>成员上限高</strong> - 支持最多200,000名成员（需验证通道），标准上限为5000人</li>
+                <li><strong>强大的权限管理</strong> - 支持细粒度的成员权限控制</li>
+                <li><strong>消息审核功能</strong> - 管理员可以先审后发，防止垃圾信息</li>
+                <li><strong>完善的管理工具</strong> - 包括消息置顶、投票、问卷调查等</li>
+                <li><strong>数据分析能力</strong> - 提供群组统计数据，帮助了解成员活跃度</li>
+                <li><strong>永久链接支持</strong> - 每条消息都有独立链接，方便分享</li>
+            </ul>
+            
+            <p>根据Telegram官方统计，2026年全球已有超过5000万个超级群组，其中10%的群组成员超过1000人。超级群组已成为企业、社群、学习组织的重要沟通平台。更多<a href="/" style="color: #2196F3; text-decoration: none;"><strong>Telegram群组管理教程</strong></a>请访问本站首页。</p>
+            
+            <h2 id="upgrade">二、普通群组升级为超级群组详细步骤</h2>
+            <p>新创建的Telegram群组默认为<strong>普通群组</strong>，成员上限为200人。当你的群组需要更多成员和高级功能时，可以将其升级为超级群组。</p>
+            
+            <div class="warning-box">
+                <strong>⚠️ 重要提醒：</strong>群组升级为超级群组后，<strong>无法降级回普通群组</strong>。请在升级前确认是否需要超级群组的功能。
+            </div>
+            
+            <h3>2.1 升级条件</h3>
+            <p>任何Telegram群组都可以升级为超级群组，没有特殊条件。但升级后，以下变化需要注意：</p>
+            <ul>
+                <li>消息不再端到端加密（但Telegram服务器仍加密存储）</li>
+                <li>群组成员列表对所有成员可见</li>
+                <li>新成员可以查看加入前的部分历史消息</li>
+            </ul>
+            
+            <h3>2.2 Android版升级步骤</h3>
+            <p>以下是在Android版Telegram升级群组为超级群组的步骤：</p>
+            <ol>
+                <li>打开Telegram应用，进入要升级的群组</li>
+                <li>点击右上角"三个竖点"菜单按钮（⋮）</li>
+                <li>选择"群组信息"（Group Info）</li>
+                <li>点击"编辑"（Edit）按钮</li>
+                <li>找到并点击"升级为超级群组"（Upgrade to Supergroup）</li>
+                <li>阅读提示信息，点击"升级"确认</li>
+            </ol>
+            
+            <h3>2.3 iOS版升级步骤</h3>
+            <p>iOS版步骤类似：</p>
+            <ol>
+                <li>打开Telegram应用，进入要升级的群组</li>
+                <li>点击右上角"头像或用户名"</li>
+                <li>点击"编辑"（Edit）按钮</li>
+                <li>找到并点击"升级为超级群组"</li>
+                <li>确认升级</li>
+            </ol>
+            
+            <h3>2.4 桌面版升级步骤</h3>
+            <p>桌面版操作步骤：</p>
+            <ol>
+                <li>打开Telegram桌面版，进入要升级的群组</li>
+                <li>点击右上角"三个点"菜单</li>
+                <li>选择"编辑权限"（Edit Permissions）</li>
+                <li>找到"升级为超级群组"选项</li>
+                <li>确认升级</li>
+            </ol>
+            
+            <div class="tip-box">
+                <strong>💡 升级建议：</strong>建议在群组成员接近200人前完成升级，避免达到上限后无法添加新成员。
+            </div>
+            
+            <h2 id="limit">三、5000人上限详解与突破方法</h2>
+            <p>超级群组的<strong>标准成员上限为5000人</strong>。这是大多数用户会遇到的第一个限制。但Telegram提供了多种方法突破这个限制。</p>
+            
+            <h3>3.1 标准上限与验证通道</h3>
+            <table>
+                <tr>
+                    <th>群组类型</th>
+                    <th>成员上限</th>
+                    <th>申请条件</th>
+                </tr>
+                <tr>
+                    <td>普通群组</td>
+                    <td>200人</td>
+                    <td>无需条件</td>
+                </tr>
+                <tr>
+                    <td>超级群组（标准）</td>
+                    <td>5000人</td>
+                    <td>升级为超级群组即可</td>
+                </tr>
+                <tr>
+                    <td>超级群组（验证）</td>
+                    <td>10,000~200,000人</td>
+                    <td>需要Telegram官方验证</td>
+                </tr>
+            </table>
+            
+            <h3>3.2 如何申请提高成员上限？</h3>
+            <p>当你的超级群组达到5000人后，可以通过以下步骤申请提高上限：</p>
+            <ol>
+                <li>进入群组，点击"群组信息"</li>
+                <li>找到"成员"（Members）选项</li>
+                <li>如果达到5000人上限，会显示"申请提高上限"（Request Higher Limit）按钮</li>
+                <li>点击按钮，填写申请表格</li>
+                <li>等待Telegram官方审核（通常需要3-7个工作日）</li>
+            </ol>
+            
+            <p><strong>申请成功的关键因素：</strong></p>
+            <ul>
+                <li>群组内容符合Telegram使用条款</li>
+                <li>群组活跃度高，成员互动频繁</li>
+                <li>管理员能够有效管理群组，无大量垃圾信息</li>
+                <li>提供详细的群组介绍和使用场景说明</li>
+            </ul>
+            
+            <h3>3.3 替代方案：创建关联频道</h3>
+            <p>如果无法获得更高成员上限，可以考虑创建<strong>关联频道</strong>（Linked Channel）。频道支持无限订阅者，可以用于发布公告、分享资源。</p>
+            <ul>
+                <li>在群组信息页面，找到"关联频道"（Linked Channel）</li>
+                <li>创建新频道或关联已有频道</li>
+                <li>频道订阅者可以查看群组讨论，但无法直接发言</li>
+            </ul>
+            
+            <div class="tip-box">
+                <strong>💡 组合策略：</strong>大型社群通常采用"超级群组+关联频道"的组合模式。群组用于核心成员讨论（上限200,000），频道用于发布公告（无限订阅者）。
+            </div>
+            
+            <h2 id="permission">四、超级群组权限管理功能</h2>
+            <p>超级群组提供了<strong>细粒度的权限管理</strong>，帮助管理员有效控制群组秩序。</p>
+            
+            <h3>4.1 成员权限设置</h3>
+            <p>你可以为所有成员或特定成员设置以下权限：</p>
+            <ul>
+                <li><strong>发送消息</strong> - 是否允许发送文本消息</li>
+                <li><strong>发送媒体</strong> - 是否允许发送图片、视频、音频</li>
+                <li><strong>发送贴纸</strong> - 是否允许发送贴纸和GIF</li>
+                <li><strong>发送投票</strong> - 是否允许创建投票</li>
+                <li><strong>嵌入链接</strong> - 是否允许发送包含链接的消息</li>
+                <li><strong>添加成员</strong> - 是否允许邀请新成员</li>
+                <li><strong>发起语音聊天</strong> - 是否允许启动语音/视频聊天</li>
+            </ul>
+            
+            <h3>4.2 管理员角色配置</h3>
+            <p>超级群组支持<strong>多位管理员</strong>，每位管理员可以配置不同的权限：</p>
+            <ul>
+                <li><strong>全面权限管理员</strong> - 拥有所有权限，可以修改群组设置</li>
+                <li><strong>消息管理管理员</strong> - 可以删除消息、禁言成员</li>
+                <li><strong>成员管理管理员</strong> - 可以封禁/解封成员、审批入群申请</li>
+                <li><strong>内容管理管理员</strong> - 可以管理消息置顶、投票等</li>
+            </ul>
+            
+            <div class="warning-box">
+                <strong>⚠️ 安全建议：</strong>不要给太多人"全面权限管理员"角色。建议仅创建者保留全面权限，其他管理员分配特定权限。
+            </div>
+            
+            <h3>4.3 权限设置步骤（以Android为例）</h3>
+            <ol>
+                <li>进入群组，点击"群组信息"</li>
+                <li>点击"权限"（Permissions）</li>
+                <li>设置"默认权限"（适用于所有成员）</li>
+                <li>点击"管理员"（Admins），添加或编辑管理员</li>
+                <li>为每位管理员勾选具体权限</li>
+                <li>保存设置</li>
+            </ol>
+            
+            <h2 id="audit">五、消息审核与慢速模式设置</h2>
+            <p>对于大型群组，<strong>消息审核</strong>和<strong>慢速模式</strong>是防止垃圾信息和刷屏的重要工具。</p>
+            
+            <h3>5.1 消息审核功能（审核群）</h3>
+            <p>开启消息审核后，新成员的消息不会立即显示在群组中，而是先发送给管理员审核。</p>
+            <ul>
+                <li><strong>适用场景</strong>：高价值社群、企业内群、学习群组</li>
+                <li><strong>开启方法</strong>：群组信息 → 权限 → 开启"消息审核"（Enable Message Review）</li>
+                <li><strong>审核流程</strong>：管理员批准后，消息才会显示给所有成员</li>
+            </ul>
+            
+            <h3>5.2 慢速模式（Slow Mode）</h3>
+            <p>慢速模式限制成员在一定时间内只能发送一条消息，有效防止刷屏。</p>
+            <ul>
+                <li><strong>可选间隔</strong>：10秒、30秒、1分钟、5分钟、15分钟、1小时</li>
+                <li><strong>开启方法</strong>：群组信息 → 权限 → 设置"慢速模式"（Slow Mode）</li>
+                <li><strong>效果</strong>：成员发送消息后，需要等待设定时间才能再次发送</li>
+            </ul>
+            
+            <table>
+                <tr>
+                    <th>慢速模式间隔</th>
+                    <th>适用场景</th>
+                    <th>推荐群组类型</th>
+                </tr>
+                <tr>
+                    <td>10秒</td>
+                    <td>轻度限制，保持讨论流畅</td>
+                    <td>活跃技术群</td>
+                </tr>
+                <tr>
+                    <td>1分钟</td>
+                    <td>中等限制，减少刷屏</td>
+                    <td>普通兴趣群</td>
+                </tr>
+                <tr>
+                    <td>15分钟</td>
+                    <td>严格限制，仅公告式交流</td>
+                    <td>企业通知群</td>
+                </tr>
+            </table>
+            
+            <h2 id="pin">六、消息置顶与重要公告管理</h2>
+            <p>超级群组支持<strong>消息置顶</strong>功能，可以将重要消息固定在群组顶部，方便所有成员查看。</p>
+            
+            <h3>6.1 置顶消息的类型</h3>
+            <ul>
+                <li><strong>群规公告</strong> - 群组规则、行为规范</li>
+                <li><strong>重要通知</strong> - 活动通知、变更公告</li>
+                <li><strong>资源链接</strong> - 共享文档、学习资料</li>
+                <li><strong>常见问题</strong> - FAQ、新人必读</li>
+            </ul>
+            
+            <h3>6.2 置顶消息的操作步骤</h3>
+            <ol>
+                <li>长按要置顶的消息</li>
+                <li>点击"置顶"（Pin）按钮</li>
+                <li>选择是否通知所有成员</li>
+                <li>确认置顶</li>
+            </ol>
+            
+            <p><strong>注意</strong>：超级群组最多支持<strong>10条置顶消息</strong>。超过后需要先取消部分置顶，才能置顶新消息。</p>
+            
+            <h3>6.3 置顶消息的最佳实践</h3>
+            <ul>
+                <li>定期更新置顶消息，确保信息时效性</li>
+                <li>使用投票或问卷调查了解成员需求</li>
+                <li>置顶消息中包含群组介绍和入群须知</li>
+                <li>为置顶消息添加emoji图标，提高辨识度</li>
+            </ul>
+            
+            <div class="tip-box">
+                <strong>💡 专业技巧：</strong>可以创建一条"群规+资源汇总"的消息，包含所有重要链接和规则，将其长期置顶。这样可以减少重复回答新人问题。
+            </div>
+            
+            <h2 id="statistics">七、群组统计数据分析</h2>
+            <p>超级群组提供<strong>统计数据</strong>功能，帮助管理员了解群组活跃度和成员行为。</p>
+            
+            <h3>7.1 可查看的统计数据</h3>
+            <ul>
+                <li><strong>成员增长趋势</strong> - 每日/每周/每月新增成员数</li>
+                <li><strong>消息发送量</strong> - 每日消息数量统计</li>
+                <li><strong>成员活跃度</strong> - 活跃成员占比、沉默成员数量</li>
+                <li><strong>消息互动</strong> - 点赞数、回复数的统计</li>
+                <li><strong>成员来源</strong> - 新成员是通过邀请链接、搜索还是推荐加入</li>
+            </ul>
+            
+            <h3>7.2 如何查看统计数据？</h3>
+            <p>只有拥有"查看统计数据"权限的管理员才能查看：</p>
+            <ol>
+                <li>进入群组，点击"群组信息"</li>
+                <li>找到并点击"统计数据"（Statistics）</li>
+                <li>选择时间范围（7天、30天、全部）</li>
+                <li>查看各种图表和数据</li>
+            </ol>
+            
+            <h3>7.3 如何利用统计数据优化群组？</h3>
+            <ul>
+                <li>如果消息量下降，可以发起投票或活动提高活跃度</li>
+                <li>如果新增成员减少，可以分享邀请链接到社交平台</li>
+                <li>如果活跃度低，可以调整群组主题或增加互动环节</li>
+            </ul>
+            
+            <!-- 文章内下载横幅 -->
+            <div class="in-article-download">
+                <h3>📥 官方正版 Telegram 下载</h3>
+                <p>请前往官网下载最新版客户端，体验超级群组的全部功能。</p>
+                <a href="https://telegram.org/dl" class="btn" target="_blank">前往官网下载</a>
+            </div>
+            
+            <h2 id="faq">八、常见问题解答（FAQ）</h2>
+            <div class="faq-section">
+                <div class="faq-item">
+                    <h3>Q1：升级为超级群组后，历史消息会丢失吗？</h3>
+                    <p><strong>A：</strong>不会。升级为超级群组后，所有历史消息都会保留。但新成员加入后可以查看部分历史消息（默认为最近100条）。</p>
+                </div>
+                
+                <div class="faq-item">
+                    <h3>Q2：超级群组的5000人上限可以突破吗？</h3>
+                    <p><strong>A：</strong>可以。当群组达到5000人后，可以申请Telegram官方验证，提高上限至10,000~200,000人。申请入口在"群组信息"→"成员"页面。</p>
+                </div>
+                
+                <div class="faq-item">
+                    <h3>Q3：如何防止群组被垃圾信息骚扰？</h3>
+                    <p><strong>A：</strong>可以采取以下措施：</p>
+                    <ul>
+                        <li>开启消息审核功能，新成员消息需审核</li>
+                        <li>设置慢速模式，限制发送频率</li>
+                        <li>限制新成员权限（如加入后24小时才能发言）</li>
+                        <li>使用防垃圾机器人（如Combot、Rose等）</li>
+                    </ul>
+                </div>
+                
+                <div class="faq-item">
+                    <h3>Q4：超级群组支持文件共享吗？有大小限制吗？</h3>
+                    <p><strong>A：</strong>支持。Telegram支持发送最大2GB的单个文件（Telegram Premium用户可发送最大4GB）。群组中没有额外的文件大小限制。</p>
+                </div>
+                
+                <div class="faq-item">
+                    <h3>Q5：如何将超级群组转让给其他人管理？</h3>
+                    <p><strong>A：</strong>只有群组创建者才能转让群组。步骤如下：群组信息 → 管理员 → 添加新管理员并授予"全面权限" → 点击创建者账号，选择"转让群组"（Transfer Group）→ 确认转让。转让后，你将失去创建者权限。</p>
+                </div>
+                
+                <div class="faq-item">
+                    <h3>Q6：超级群组可以设置为"仅管理员发言"模式吗？</h3>
+                    <p><strong>A：</strong>可以。在"权限"设置中，取消所有成员的"发送消息"权限，这样只有管理员能够发送消息。这适用于公告型群组。</p>
+                </div>
+                
+                <div class="faq-item">
+                    <h3>Q7：如何导出超级群组的所有成员列表？</h3>
+                    <p><strong>A：</strong>Telegram官方客户端不支持导出成员列表。但可以使用第三方工具（如Telegram CLI）或Bot API来实现。注意：导出成员列表可能涉及隐私问题，请确保合法合规。</p>
+                </div>
+            </div>
+            
+            <h2>九、总结与建议</h2>
+            <p>Telegram超级群组是管理大型社群的强大工具。通过本文的详细介绍，你应该已经掌握了超级群组的核心功能和管理技巧。</p>
+            
+            <p><strong>最后给出几点建议：</strong></p>
+            <ul>
+                <li>在群组接近200人前完成升级，避免影响成员添加。</li>
+                <li>合理配置权限，避免赋予过多管理员"全面权限"。</li>
+                <li>定期查看统计数据，了解群组健康状况。</li>
+                <li>对于大型群组，建议开启慢速模式或消息审核。</li>
+            </ul>
+            
+            <p>希望本文对你有帮助。如果你在超级群组管理中遇到问题，欢迎在评论区留言，或通过<a href="contact.html">联系方式</a>页面联系我们。</p>
+            
+            <p>如果你想学习更多<a href="/" style="color: #2196F3; text-decoration: none;"><strong>Telegram群组管理技巧</strong></a>，请访问<a href="/" style="color: #2196F3;">TelegramClean首页</a>。也可以查看本站<a href="article3.html">群组自动清理教程</a>和<a href="article14.html">防垃圾消息设置指南</a>。</p>
+        </div>
+        
+        <!-- 免责声明 -->
+        <div class="disclaimer">
+            <strong>⚠️ 免责声明：</strong>本站仅提供Telegram客户端使用教程与功能科普，与Telegram官方无关。请用户自觉遵守当地法律法规，尊重他人隐私，合理使用群组管理功能。
+        </div>
+    </article>
+    
+    <!-- 相关文章 -->
+    <section class="related-articles">
+        <h2>📚 相关文章</h2>
+        <div class="related-grid">
+            <a href="article3.html" class="related-card">
+                <h3>Telegram群组开启自动清理历史消息教程（管理员必看）</h3>
+                <p>发布日期：2026-06-22 | 分类：群组消息管理</p>
+            </a>
+            
+            <a href="article14.html" class="related-card">
+                <h3>Telegram群组防垃圾消息设置指南（管理员手册）</h3>
+                <p>发布日期：2026-06-22 | 分类：群组消息管理</p>
+            </a>
+            
+            <a href="article12.html" class="related-card">
+                <h3>Telegram群组管理员权限设置详解（完整指南）</h3>
+                <p>发布日期：2026-06-22 | 分类：群组消息管理</p>
+            </a>
+        </div>
+    </section>
+    
+    <!-- 吸底下载条 -->
+    <div class="sticky-download">
+        <p>📥 官方正版 Telegram 下载</p>
+        <a href="https://telegram.org/dl" class="btn">立即下载</a>
+    </div>
+    
+    <!-- 页脚 -->
+    <footer class="footer">
+        <div class="footer-inner">
+            <div>
+                <h3>TelegramClean</h3>
+                <p>提供Telegram使用教程与功能科普，帮你解决各种使用问题。</p>
+            </div>
+            
+            <div>
+                <h3>教程分类</h3>
+                <ul>
+                    <li><a href="category1.html">自动删消息设置</a></li>
+                    <li><a href="category2.html">私聊记录清理</a></li>
+                    <li><a href="category3.html">群组消息管理</a></li>
+                    <li><a href="category4.html">定时清理规则</a></li>
+                    <li><a href="category5.html">聊天记录维护</a></li>
+                </ul>
+            </div>
+            
+            <div>
+                <h3>合规声明</h3>
+                <ul>
+                    <li><a href="disclaimer.html">免责声明</a></li>
+                    <li><a href="privacy.html">隐私政策</a></li>
+                    <li><a href="copyright.html">版权声明</a></li>
+                    <li><a href="contact.html">联系方式</a></li>
+                </ul>
+            </div>
+        </div>
+        
+        <div style="text-align: center; margin-top: 40px; color: #999; font-size: 14px;">
+            <p>© 2026 telegramclean.com 版权所有 | 本站与Telegram官方无关，仅提供使用教程</p>
+            <p>本站不涉及任何违反法律法规的行为，请用户自觉遵守当地法律法规</p>
+        </div>
+    </footer>
+</body>
+</html>

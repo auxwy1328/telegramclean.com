@@ -1,0 +1,392 @@
+﻿<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Telegram自动清理脚本编写教程（Python/Node.js·2026最新）</title>
+    <meta name="description" content="详细讲解如何编写Telegram自动清理脚本，涵盖Python和Node.js两种实现方式，包含完整代码示例和部署指南。">
+    <meta name="keywords" content="Telegram自动清理脚本,Telegram API清理,Telegram消息批量删除脚本,Telegram自动化脚本">
+    <link rel="stylesheet" href="css/style.min.css">
+    <link rel="icon" href="images/favicon.svg" type="image/svg+xml">
+        <!-- Open Graph / Schema.org SEO -->
+    <meta property="og:site_name" content="TelegramClean">
+    <meta property="og:type" content="article">
+    <meta property="og:title" content="Telegram自动清理脚本编写教程（Python/Node.js·2026最新）">
+    <meta property="og:description" content="详细讲解如何编写Telegram自动清理脚本，包含Python和Node.js两种版本的完整代码。">
+    <meta property="og:url" content="https://telegramclean.com/article17.html">
+    <meta property="og:locale" content="zh_CN">
+    <link rel="canonical" href="https://telegramclean.com/article17.html">
+    <script type="application/ld+json">{"@context":"https://schema.org","@type":"Article","headline":"Telegram自动清理脚本编写教程（Python/Node.js·2026最新）","description":"详细讲解如何编写Telegram自动清理脚本，包含Python和Node.js两种版本的完整代码。","url":"https://telegramclean.com/article17.html","publisher":{"@type":"Organization","name":"TelegramClean","url":"https://telegramclean.com"},"datePublished":"2026-06-22","dateModified":"2026-06-22","author":{"@type":"Organization","name":"TelegramClean"},"articleSection":"定时清理规则","inLanguage":"zh-CN"}</script>
+
+</head>
+<body>
+    <nav class="navbar">
+        <div class="container">
+            <a href="index.html" class="logo">Telegram使用指南</a>
+            <ul class="nav-links">
+                <li><a href="index.html">首页</a></li>
+                <li><a href="category1.html">基础入门</a></li>
+                <li><a href="category2.html">隐私与安全</a></li>
+                <li><a href="category3.html">群组消息管理</a></li>
+                <li><a href="category4.html">定时清理规则</a></li>
+                <li><a href="category5.html">聊天记录维护</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="container main-container">
+        <nav class="breadcrumb">
+            <a href="index.html">首页</a> &gt; <a href="category4.html">定时清理规则</a> &gt; 正文
+        </nav>
+
+        <article class="article-content">
+            <header class="article-header">
+                <h1>Telegram自动清理脚本编写教程（Python/Node.js·2026最新）</h1>
+                <div class="article-meta">
+                    <span>发布时间：2026-01-28</span>
+                    <span>阅读量：2634</span>
+                    <span>分类：定时清理规则</span>
+                </div>
+            </header>
+
+            <div class="article-cover"><img src="/images/cover17.svg" alt="TelegramClean教程配图" width="800" height="450" loading="lazy"></div>
+
+            <div class="toc">
+                <h2>目录</h2>
+                <ol>
+                    <li><a href="#section1">编写自动清理脚本的优势</a></li>
+                    <li><a href="#section2">准备工作（Telegram API获取与配置）</a></li>
+                    <li><a href="#section3">Python版自动清理脚本（含代码）</a></li>
+                    <li><a href="#section4">Node.js版自动清理脚本（含代码）</a></li>
+                    <li><a href="#section5">脚本功能说明（按时间/关键词/对话类型筛选）</a></li>
+                    <li><a href="#section6">部署与定时执行</a></li>
+                    <li><a href="#section7">安全注意事项与API限速</a></li>
+                    <li><a href="#section8">常见问题FAQ</a></li>
+                    <li><a href="#section9">总结</a></li>
+                </ol>
+            </div>
+
+            <div class="article-body">
+                <section id="section1">
+                    <h2>一、编写自动清理脚本的优势</h2>
+                    <p>对于有一定技术基础的Telegram用户来说，编写自动清理脚本是一种强大且灵活的解决方案。相比使用现成的Bot或第三方工具，自定义脚本具有以下几个显著优势。</p>
+                    <p><strong>1. 完全可控的数据处理</strong></p>
+                    <p>使用自定义脚本意味着所有数据处理都在您自己的环境中完成，无需将API凭证和数据交给第三方服务。这对于注重隐私安全或需要处理敏感信息的用户来说尤为重要。您可以完全掌控脚本的行为，确保不会发生数据泄露或被滥用的情况。</p>
+                    <p><strong>2. 高度定制化的清理逻辑</strong></p>
+                    <p>现成的工具往往只能提供通用的清理规则，难以满足一些特殊的个性化需求。使用脚本可以完全自定义清理逻辑，实现任何您想要的功能组合。例如，可以实现"只删除包含特定关键词的非管理员消息"这类复杂规则。</p>
+                    <p><strong>3. 成本效益更高</strong></p>
+                    <p>大多数商业清理工具都需要付费订阅，而自定义脚本只需要您投入一次性的开发时间。Python和Node.js都有成熟的开源Telegram库，可以免费使用，长期来看成本更低。</p>
+                    <p><strong>4. 便于与其他系统集成</strong></p>
+                    <p>如果您需要将Telegram消息清理与其他业务流程集成，自定义脚本是最灵活的选择。例如，可以将清理任务与企业的工作流系统对接，或者在清理后自动生成报告发送到指定邮箱。</p>
+                    <p>当然，编写脚本也需要一定的编程基础和学习成本。如果您不具备相关技术能力，建议选择现成的工具方案。</p>
+                </section>
+
+                <section id="section2">
+                    <h2>二、准备工作（Telegram API获取与配置）</h2>
+                    <p>在开始编写脚本之前，您需要完成一些基础准备工作，其中最重要的是获取Telegram API凭证。以下是详细的准备步骤。</p>
+                    <p><strong>第一步：创建Telegram应用</strong></p>
+                    <p>打开Telegram并搜索@BotFather，这是Telegram官方的Bot管理工具。发送命令"/newbot"创建一个新的Bot，按照提示输入Bot名称和用户名。创建成功后，BotFather会返回您的Bot Token，格式类似于"123456789:ABCdefGhIJKlmNoPQRsTUVwxyZ"。这个Token就是您访问Telegram API的密钥，请妥善保管。</p>
+                    <p><strong>第二步：获取API ID和API Hash（可选，用于用户账号操作）</strong></p>
+                    <p>如果您需要操作用户账号而非Bot账号（例如管理自己的聊天记录），还需要获取API ID和API Hash。访问my.telegram.org网站，使用您的Telegram账号登录。登录后进入"API development tools"页面，填写应用名称后即可获得API ID和API Hash。</p>
+                    <p><strong>第三步：配置开发环境</strong></p>
+                    <p>根据您选择的编程语言，准备相应的开发环境：</p>
+                    <p>对于Python版本，您需要安装Python 3.7或更高版本，以及telethon库（用于操作用户账号）或python-telegram-bot库（用于操作Bot账号）。安装命令：pip install telethon 或 pip install python-telegram-bot</p>
+                    <p>对于Node.js版本，您需要安装Node.js 14或更高版本，以及telegram.js或telegraf库。安装命令：npm install telegraf 或 npm install telegram</p>
+                    <div class="tip-box">
+                        <strong>💡 建议：</strong>如果您刚开始接触Telegram API开发，推荐从Python+telethon组合开始，telethon库的文档更加完善，社区支持也更丰富。
+                    </div>
+                </section>
+
+                <section id="section3">
+                    <h2>三、Python版自动清理脚本（含代码）</h2>
+                    <p>下面提供一个完整的Python自动清理脚本示例，使用telethon库实现，支持按时间范围清理聊天记录。</p>
+                    <pre><code>
+# Telegram Cleaner Script - Python Version
+# 需要先安装telethon库: pip install telethon
+
+from telethon import TelegramClient
+from datetime import datetime, timedelta
+import asyncio
+
+# ==================== 配置区域 ====================
+API_ID = 'YOUR_API_ID'          # 替换为您的API ID
+API_HASH = 'YOUR_API_HASH'       # 替换为您的API Hash
+PHONE = '+8613800138000'         # 替换为您的手机号
+DAYS_TO_KEEP = 7                 # 保留天数，超过这个时间的消息将被删除
+# ============================================
+
+async def main():
+    # 创建客户端会话
+    client = TelegramClient('cleaner_session', API_ID, API_HASH)
+    await client.start(phone=PHONE)
+    
+    print("正在获取所有对话...")
+    dialogs = await client.get_dialogs()
+    
+    # 计算截止时间
+    cutoff_date = datetime.now() - timedelta(days=DAYS_TO_KEEP)
+    
+    deleted_count = 0
+    
+    for dialog in dialogs:
+        if dialog.is_channel or dialog.is_group:
+            print(f"正在处理: {dialog.name}")
+            
+            # 获取该对话中的消息
+            async for message in client.iter_messages(dialog.id):
+                if message.date and message.date.replace(tzinfo=None) < cutoff_date:
+                    try:
+                        await message.delete()
+                        deleted_count += 1
+                    except Exception as e:
+                        print(f"删除消息失败: {e}")
+                elif message.date and message.date.replace(tzinfo=None) >= cutoff_date:
+                    # 消息已经到达保留期限，停止继续遍历
+                    break
+    
+    print(f"清理完成！共删除 {deleted_count} 条消息。")
+    await client.disconnect()
+
+if __name__ == '__main__':
+    asyncio.run(main())
+                    </code></pre>
+                    <p><strong>脚本使用说明：</strong></p>
+                    <p>1. 将上述代码保存为cleaner.py文件；2. 修改配置区域的四个参数（API_ID、API_HASH、PHONE、DAYS_TO_KEEP）；3. 运行命令python cleaner.py执行清理。首次运行时会提示您输入验证码进行登录验证。</p>
+                </section>
+
+                <section id="section4">
+                    <h2>四、Node.js版自动清理脚本（含代码）</h2>
+                    <p>对于熟悉JavaScript/Node.js的开发者，下面提供Node.js版本的清理脚本示例。</p>
+                    <pre><code>
+const { TelegramClient } = require('telegram');
+const { StringSession } = require('telegram/sessions');
+const input = require('input');
+
+// ==================== 配置区域 ====================
+const API_ID = 12345;              // 替换为您的API ID
+const API_HASH = 'YOUR_API_HASH';  // 替换为您的API Hash
+const STRING_SESSION = '';         // 会话字符串，首次运行后会自动生成
+const DAYS_TO_KEEP = 7;            // 保留天数
+// ============================================
+
+async function main() {
+    const session = new StringSession(STRING_SESSION);
+    const client = new TelegramClient(session, API_ID, API_HASH, {
+        connectionRetries: 5,
+    });
+    
+    await client.start({
+        phoneNumber: async () => await input.text('请输入手机号: '),
+        phoneCode: async () => await input.text('请输入验证码: '),
+        password: async () => await input.text('请输入两步验证密码: '),
+    });
+    
+    console.log('已连接到Telegram，正在获取对话列表...');
+    
+    const dialogs = await client.getDialogs({});
+    const cutoffDate = new Date();
+    cutoffDate.setDate(cutoffDate.getDate() - DAYS_TO_KEEP);
+    
+    let deletedCount = 0;
+    
+    for (const dialog of dialogs) {
+        if (dialog.isChannel || dialog.isGroup) {
+            console.log(`正在处理: ${dialog.title}`);
+            
+            const messages = await client.getMessages(dialog.id, {
+                limit: 100  // 每次获取100条消息
+            });
+            
+            for (const message of messages) {
+                if (message.date && new Date(message.date * 1000) < cutoffDate) {
+                    try {
+                        await client.deleteMessages(dialog.id, [message.id]);
+                        deletedCount++;
+                    } catch (e) {
+                        console.error('删除失败:', e);
+                    }
+                } else {
+                    break;  // 遇到保留期限内的消息，停止该对话的处理
+                }
+            }
+        }
+    }
+    
+    console.log(`清理完成！共删除 ${deletedCount} 条消息。`);
+    
+    // 保存会话字符串以便下次使用
+    console.log('会话字符串:', client.session.save());
+    process.exit(0);
+}
+
+main();
+                    </code></pre>
+                    <p><strong>安装和运行步骤：</strong></p>
+                    <p>1. 初始化项目：npm init -y；2. 安装依赖：npm install telegram input；3. 保存代码为cleaner.js；4. 修改配置参数；5. 运行：node cleaner.js</p>
+                </section>
+
+                <section id="section5">
+                    <h2>五、脚本功能说明（按时间/关键词/对话类型筛选）</h2>
+                    <p>基础版本的清理脚本只能按时间清理消息。下面介绍几种增强功能，帮助您实现更精细化的清理控制。</p>
+                    <p><strong>功能一：按关键词过滤删除</strong></p>
+                    <p>可以在脚本中添加关键词过滤逻辑，只删除包含特定关键词的消息：</p>
+                    <pre><code>
+# 关键词过滤示例
+KEYWORDS_TO_DELETE = ['广告', 'spam', '推广链接']
+MUST_DELETE = ['敏感词1', '敏感词2']  # 必删关键词
+
+async def should_delete_message(message):
+    if not message.text:
+        return False
+    
+    text = message.text.lower()
+    
+    # 检查是否包含必删关键词
+    for keyword in MUST_DELETE:
+        if keyword.lower() in text:
+            return True
+    
+    # 检查是否包含过滤关键词（在确认后删除）
+    for keyword in KEYWORDS_TO_DELETE:
+        if keyword.lower() in text:
+            return True
+    
+    return False
+                    </code></pre>
+                    <p><strong>功能二：按对话类型筛选</strong></p>
+                    <p>可以设置只处理特定类型的对话，例如只清理群组消息而保留私聊：</p>
+                    <pre><code>
+CLEAN_PRIVATE = True   # 是否清理私聊
+CLEAN_GROUPS = True    # 是否清理群组
+CLEAN_CHANNELS = True  # 是否清理频道
+
+for dialog in dialogs:
+    should_process = False
+    
+    if dialog.is_user and CLEAN_PRIVATE:
+        should_process = True
+    elif dialog.is_group and CLEAN_GROUPS:
+        should_process = True
+    elif dialog.is_channel and CLEAN_CHANNELS:
+        should_process = True
+    
+    if should_process:
+        # 执行清理逻辑...
+                    </code></pre>
+                    <p><strong>功能三：排除特定用户</strong></p>
+                    <p>可以设置管理员或白名单用户，这些用户发送的消息不会被删除：</p>
+                    <pre><code>
+PROTECTED_USERS = ['admin_username', 'owner_username']  # 保护的用户
+
+async for message in client.iter_messages(dialog.id):
+    # 检查消息发送者是否受保护
+    if message.sender_id and message.sender.username in PROTECTED_USERS:
+        continue  # 跳过受保护用户的消息
+    # ... 执行删除逻辑
+                    </code></pre>
+                </section>
+
+                <section id="section6">
+                    <h2>六、部署与定时执行</h2>
+                    <p>为了让清理脚本能够自动定期运行，需要将其部署到服务器上并配置定时任务。下面介绍常见的部署方案。</p>
+                    <p><strong>方案一：使用cron定时任务（Linux/macOS）</strong></p>
+                    <p>在Linux或macOS服务器上，可以使用cron来实现定时执行。编辑crontab文件：crontab -e</p>
+                    <p>添加以下行来实现每天凌晨3点执行清理：</p>
+                    <pre><code>0 3 * * * /usr/bin/python3 /path/to/cleaner.py >> /path/to/cleaner.log 2>&1</code></pre>
+                    <p>这行配置表示每天凌晨3点整执行一次清理脚本，并将输出追加到日志文件。</p>
+                    <p><strong>方案二：使用Windows任务计划程序</strong></p>
+                    <p>在Windows服务器上，可以使用任务计划程序来配置定时任务。打开"任务计划程序"，创建基本任务，按照向导设置触发器（每天凌晨3点）和操作（运行pythonw.exe执行脚本）。</p>
+                    <p><strong>方案三：使用云函数（无服务器方案）</strong></p>
+                    <p>对于不想管理服务器的用户，可以考虑使用AWS Lambda、阿里云函数计算等云函数服务。将脚本打包后部署到云函数，配置定时触发器即可。这种方式无需维护服务器，按实际运行时间计费。</p>
+                    <div class="tip-box">
+                        <strong>💡 部署建议：</strong>建议在非高峰期执行清理任务，如凌晨时分。同时做好日志记录，便于排查问题和统计清理效果。
+                    </div>
+                </section>
+
+                <section id="section7">
+                    <h2>七、安全注意事项与API限速</h2>
+                    <p>使用Telegram API编写脚本时，需要遵守一些重要的安全规范和限速规则。</p>
+                    <p><strong>安全注意事项：</strong></p>
+                    <p>1. <strong>保护API凭证</strong>：不要将API ID、Hash、Token等凭证硬编码在代码中或提交到Git仓库。建议使用环境变量或配置文件来管理凭证，并在.gitignore中排除敏感文件。</p>
+                    <p>2. <strong>最小权限原则</strong>：只申请和使用必需的API权限，避免过度授权带来的安全风险。</p>
+                    <p>3. <strong>会话安全管理</strong>：妥善保管会话字符串，如果怀疑泄露立即重新生成。</p>
+                    <p>4. <strong>输入验证</strong>：对所有用户输入进行验证，防止注入攻击。</p>
+                    <p><strong>API限速规则：</strong></p>
+                    <p>Telegram对API调用有严格的限速限制，不同类型的API调用有不同的限制：</p>
+                    <p>1. <strong>获取消息</strong>：约每秒30次请求</p>
+                    <p>2. <strong>删除消息</strong>：约每秒30次请求，建议批量删除以提高效率</p>
+                    <p>3. <strong>登录验证码</strong>：同一账号短时间内多次登录可能触发限制</p>
+                    <div class="warning-box">
+                        <strong>⚠️ 警告：</strong>违反限速规则可能导致临时或永久的API封禁。请务必在脚本中添加适当的延迟（建议每次API调用间隔0.1-0.5秒），避免触发限速。
+                    </div>
+                    <p>为了遵守限速规则，建议在脚本中添加请求间隔：</p>
+                    <pre><code>import asyncio
+import time
+
+async def safe_delete_message(client, message):
+    try:
+        await message.delete()
+        await asyncio.sleep(0.1)  # 每次删除后等待0.1秒
+    except Exception as e:
+        print(f"删除失败: {e}")
+        await asyncio.sleep(1)  # 出错时等待更长时间
+                    </code></pre>
+                </section>
+
+                <section id="section8">
+                    <h2>八、常见问题FAQ</h2>
+                    <p><strong>Q1：脚本删除的消息可以被恢复吗？</strong></p>
+                    <p>A：不可以。通过API删除的消息将被永久删除，无法恢复。在执行删除前请确保已备份重要数据。</p>
+
+                    <p><strong>Q2：如何处理API限速导致的执行失败？</strong></p>
+                    <p>A：当遇到限速错误时，脚本应该捕获异常并等待一段时间后重试。可以在代码中添加指数退避策略，每次失败后等待的时间翻倍。</p>
+
+                    <p><strong>Q3：脚本可以同时处理多个账号吗？</strong></p>
+                    <p>A：可以，但需要注意每个账号使用独立的会话文件（session）和独立的API凭证。并发处理多个账号时也要注意总的API调用频率。</p>
+
+                    <p><strong>Q4：如何在不删除的情况下统计消息分布情况？</strong></p>
+                    <p>A：可以在脚本中先运行统计模式（不实际删除，只计数），根据统计结果调整清理参数后再执行实际删除。</p>
+
+                    <p><strong>Q5：Bot账号和用户账号创建的脚本有什么区别？</strong></p>
+                    <p>A：Bot账号创建的脚本使用Bot Token登录，只能操作Bot被添加到的群组或接收Bot的消息。用户账号创建的脚本可以操作用户所有的对话和数据，但需要提供手机号和验证码进行登录验证。</p>
+                </section>
+
+                <section id="section9">
+                    <h2>九、总结</h2>
+                    <p>通过本文的详细介绍，相信您已经掌握了使用Python和Node.js编写Telegram自动清理脚本的方法。自定义脚本为您提供了最大的灵活性和控制力，可以实现任何复杂的清理逻辑。</p>
+                    <p>在实践过程中，建议从简单的功能开始，逐步增加复杂度。务必在充分测试后再执行实际的删除操作，避免因逻辑错误导致意外的数据损失。同时要严格遵守Telegram的API使用规范，避免触发限速或封禁。</p>
+                    <p>如果您对编程不太熟悉，建议先学习基础的编程知识，或者选择使用现成的Bot工具。对于具备编程能力的用户，自定义脚本无疑是最强大和灵活的解决方案。</p>
+                    <p>更多相关教程，欢迎阅读：<a href="article1.html">Telegram注册与首次使用完整教程</a>、<a href="article15.html">使用Telegram Bot定时清理消息教程</a>，或前往<a href="category4.html">定时清理规则</a>分类页面获取更多学习资源。</p>
+                </section>
+            </div>
+
+            <div class="disclaimer">
+                <strong>免责声明：</strong>本文内容仅供参考学习，不构成任何操作建议。Telegram平台功能可能随版本更新而变化，请以实际界面为准。
+            </div>
+
+            <div class="related-articles">
+                <h3>相关文章推荐</h3>
+                <ul>
+                    <li><a href="article1.html">Telegram注册与首次使用完整教程</a></li>
+                    <li><a href="article15.html">使用Telegram Bot定时清理消息教程</a></li>
+                    <li><a href="article16.html">第三方Telegram清理工具对比评测</a></li>
+                </ul>
+            </div>
+        </article>
+    </div>
+
+    <div class="download-bar">
+        <div class="container">
+            <span>觉得有用？保存到本地方便随时查阅</span>
+            <a href="#" class="btn-download">📥 下载本文完整教程</a>
+        </div>
+    </div>
+
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2026 Telegram使用指南 - 专注于Telegram使用技巧与教程</p>
+            <p><a href="index.html">返回首页</a> | <a href="category4.html">定时清理规则</a></p>
+        </div>
+    </footer>
+</body>
+</html>

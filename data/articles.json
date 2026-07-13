@@ -1,0 +1,212 @@
+﻿[
+  {
+    "id": 1,
+    "title": "Telegram开启私聊自动删除消息设置步骤（2026最新）",
+    "category": "自动删消息设置",
+    "categoryId": "category1",
+    "cover": "images/cover1.svg"
+  },
+  {
+    "id": 6,
+    "title": "如何关闭Telegram自动删除消息功能（取消自毁计时器）",
+    "category": "自动删消息设置",
+    "categoryId": "category1",
+    "cover": "images/cover6.svg"
+  },
+  {
+    "id": 7,
+    "title": "Telegram秘密聊天自毁计时器设置教程（端到端加密）",
+    "category": "自动删消息设置",
+    "categoryId": "category1",
+    "cover": "images/cover7.svg"
+  },
+  {
+    "id": 8,
+    "title": "Telegram自动删除消息常见问题大全（最全FAQ）",
+    "category": "自动删消息设置",
+    "categoryId": "category1",
+    "cover": "images/cover8.svg"
+  },
+  {
+    "id": 2,
+    "title": "手动一键清理Telegram单条/全部聊天记录方法",
+    "category": "私聊记录清理",
+    "categoryId": "category2",
+    "cover": "images/cover2.svg"
+  },
+  {
+    "id": 9,
+    "title": "批量删除Telegram私聊记录方法（多选/按日期/按联系人）",
+    "category": "私聊记录清理",
+    "categoryId": "category2",
+    "cover": "images/cover9.svg"
+  },
+  {
+    "id": 10,
+    "title": "如何恢复删除的Telegram聊天记录（最新方法汇总）",
+    "category": "私聊记录清理",
+    "categoryId": "category2",
+    "cover": "images/cover10.svg"
+  },
+  {
+    "id": 11,
+    "title": "Telegram私聊存储空间优化指南（释放手机内存）",
+    "category": "私聊记录清理",
+    "categoryId": "category2",
+    "cover": "images/cover11.svg"
+  },
+  {
+    "id": 3,
+    "title": "Telegram群组开启自动清理历史消息教程（管理员必看）",
+    "category": "群组消息管理",
+    "categoryId": "category3",
+    "cover": "images/cover3.svg"
+  },
+  {
+    "id": 12,
+    "title": "Telegram群组管理员权限设置详解（完整指南）",
+    "category": "群组消息管理",
+    "categoryId": "category3",
+    "cover": "images/cover12.svg"
+  },
+  {
+    "id": 13,
+    "title": "Telegram群组消息置顶技巧（管理员必会）",
+    "category": "群组消息管理",
+    "categoryId": "category3",
+    "cover": "images/cover13.svg"
+  },
+  {
+    "id": 14,
+    "title": "Telegram群组防垃圾消息设置指南（管理员手册）",
+    "category": "群组消息管理",
+    "categoryId": "category3",
+    "cover": "images/cover14.svg"
+  },
+  {
+    "id": 4,
+    "title": "TG不同时长自动删消息规则适用场景说明（1天/1周/1月）",
+    "category": "定时清理规则",
+    "categoryId": "category4",
+    "cover": "images/cover4.svg"
+  },
+  {
+    "id": 15,
+    "title": "使用Telegram Bot定时清理消息教程（自动化方案）",
+    "category": "定时清理规则",
+    "categoryId": "category4",
+    "cover": "images/cover15.svg"
+  },
+  {
+    "id": 16,
+    "title": "第三方Telegram清理工具对比（最新评测）",
+    "category": "定时清理规则",
+    "categoryId": "category4",
+    "cover": "images/cover16.svg"
+  },
+  {
+    "id": 17,
+    "title": "Telegram自动清理脚本编写教程（Python/Node.js）",
+    "category": "定时清理规则",
+    "categoryId": "category4",
+    "cover": "images/cover17.svg"
+  },
+  {
+    "id": 5,
+    "title": "Telegram聊天记录备份与定期清理合理方案（数据安全）",
+    "category": "聊天记录维护",
+    "categoryId": "category5",
+    "cover": "images/cover5.svg"
+  },
+  {
+    "id": 18,
+    "title": "Telegram聊天记录导出完整教程（HTML/JSON格式）",
+    "category": "聊天记录维护",
+    "categoryId": "category5",
+    "cover": "images/cover18.svg"
+  },
+  {
+    "id": 19,
+    "title": "Telegram云端存储详解（无限量存储机制）",
+    "category": "聊天记录维护",
+    "categoryId": "category5",
+    "cover": "images/cover19.svg"
+  },
+  {
+    "id": 20,
+    "title": "Telegram多设备聊天同步技巧（手机/平板/电脑）",
+    "category": "聊天记录维护",
+    "categoryId": "category5",
+    "cover": "images/cover20.svg"
+  },
+  {
+    "id": 21,
+    "title": "Telegram阅后即焚功能详解（附截图教程）",
+    "category": "自动删消息设置",
+    "categoryId": "category1",
+    "cover": "images/cover21.svg"
+  },
+  {
+    "id": 22,
+    "title": "Telegram销毁模式与安全聊天区别对比",
+    "category": "自动删消息设置",
+    "categoryId": "category1",
+    "cover": "images/cover22.svg"
+  },
+  {
+    "id": 23,
+    "title": "Telegram聊天记录自动清理功能设置",
+    "category": "私聊记录清理",
+    "categoryId": "category2",
+    "cover": "images/cover23.svg"
+  },
+  {
+    "id": 24,
+    "title": "Telegram清理缓存文件释放手机存储空间",
+    "category": "私聊记录清理",
+    "categoryId": "category2",
+    "cover": "images/cover24.svg"
+  },
+  {
+    "id": 25,
+    "title": "Telegram群组消息导出与归档管理",
+    "category": "群组消息管理",
+    "categoryId": "category3",
+    "cover": "images/cover25.svg"
+  },
+  {
+    "id": 26,
+    "title": "Telegram超级群组功能详解（5000人上限）",
+    "category": "群组消息管理",
+    "categoryId": "category3",
+    "cover": "images/cover26.svg"
+  },
+  {
+    "id": 27,
+    "title": "Telegram定时任务设置与到期提醒功能",
+    "category": "定时清理规则",
+    "categoryId": "category4",
+    "cover": "images/cover27.svg"
+  },
+  {
+    "id": 28,
+    "title": "Telegram消息生命周期管理完整指南",
+    "category": "定时清理规则",
+    "categoryId": "category4",
+    "cover": "images/cover28.svg"
+  },
+  {
+    "id": 29,
+    "title": "Telegram聊天记录云端与本地同步机制详解",
+    "category": "聊天记录维护",
+    "categoryId": "category5",
+    "cover": "images/cover29.svg"
+  },
+  {
+    "id": 30,
+    "title": "Telegram多账号切换与管理技巧完整指南",
+    "category": "聊天记录维护",
+    "categoryId": "category5",
+    "cover": "images/cover30.svg"
+  }
+]

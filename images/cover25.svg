@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 225" width="400" height="225">
+  <defs><linearGradient id="b2" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" style="stop-color:#581c87"/><stop offset="100%" style="stop-color:#a855f7"/></linearGradient></defs>
+  <rect width="400" height="225" fill="url(#b2)" rx="12"/>
+  <circle cx="320" cy="60" r="100" fill="white" opacity="0.05"/>
+  <circle cx="80" cy="180" r="60" fill="white" opacity="0.05"/>
+  <circle cx="350" cy="190" r="40" fill="white" opacity="0.08"/>
+  <g transform="translate(160,55)"><path d="M4 21v-7a4 4 0 014-4h8a4 4 0 014 4v7M4 21h16M12 7a3 3 0 100-6 3 3 0 000 6z" stroke="#e9d5ff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" fill="none"/></g>
+  <text x="200" y="150" font-family="system-ui,sans-serif" font-size="15" font-weight="600" fill="white" text-anchor="middle" opacity="0.95">TelegramClean</text>
+  <text x="200" y="175" font-family="system-ui,sans-serif" font-size="12" fill="white" text-anchor="middle" opacity="0.7">群组消息导出与归档</text>
+</svg>

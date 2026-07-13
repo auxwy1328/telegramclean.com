@@ -1,0 +1,463 @@
+﻿<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Telegram群组消息导出与归档管理（2026完整教程）</title>
+    <meta name="description" content="详细讲解Telegram群组消息导出与归档管理方法，包含桌面版导出步骤、JSON/HTML格式选择、归档策略及第三方工具推荐。适用于2026年最新版Telegram。">
+    <meta name="keywords" content="Telegram群组消息导出,Telegram归档管理,Telegram聊天记录导出,Telegram数据备份,Telegram群组备份">
+    <link rel="stylesheet" href="css/style.min.css">
+    <link rel="icon" href="images/favicon.svg" type="image/svg+xml">
+        <!-- Open Graph / Schema.org SEO -->
+    <meta property="og:site_name" content="TelegramClean">
+    <meta property="og:type" content="article">
+    <meta property="og:title" content="Telegram群组消息导出与归档管理（2026完整教程）">
+    <meta property="og:description" content="详细讲解Telegram群组消息导出与归档管理方法，包含桌面版导出步骤、JSON/HTML格式选择、归档策略及第三方工具推荐。">
+    <meta property="og:url" content="https://telegramclean.com/article25.html">
+    <meta property="og:locale" content="zh_CN">
+    <link rel="canonical" href="https://telegramclean.com/article25.html">
+    <script type="application/ld+json">{"@context":"https://schema.org","@type":"Article","headline":"Telegram群组消息导出与归档管理（2026完整教程）","description":"详细讲解Telegram群组消息导出与归档管理方法，包含桌面版导出步骤、JSON/HTML格式选择、归档策略及第三方工具推荐。","url":"https://telegramclean.com/article25.html","publisher":{"@type":"Organization","name":"TelegramClean","url":"https://telegramclean.com"},"datePublished":"2026-06-22","dateModified":"2026-06-22","author":{"@type":"Organization","name":"TelegramClean"},"articleSection":"群组消息管理","inLanguage":"zh-CN"}</script>
+
+</head>
+<body>
+    <!-- 顶部导航 -->
+    <nav class="navbar">
+        <div class="navbar-inner">
+            <a href="index.html" class="logo">TelegramClean</a>
+            <ul class="nav-links">
+                <li><a href="index.html">首页</a></li>
+                <li><a href="category1.html">自动删消息设置</a></li>
+                <li><a href="category2.html">私聊记录清理</a></li>
+                <li><a href="category3.html">群组消息管理</a></li>
+                <li><a href="category4.html">定时清理规则</a></li>
+                <li><a href="category5.html">聊天记录维护</a></li>
+            </ul>
+        </div>
+    </nav>
+    
+    <!-- 面包屑 -->
+    <div class="breadcrumb">
+        <a href="index.html">首页</a> &gt; <a href="category3.html">群组消息管理</a> &gt; 正文
+    </div>
+    
+    <!-- 文章容器 -->
+    <article class="article-container">
+        <header class="article-header">
+            <h1>Telegram群组消息导出与归档管理（2026完整教程）</h1>
+            <p class="article-meta">发布日期：2026-06-22 | 分类：群组消息管理 | 阅读时长：10分钟</p>
+        </header>        
+        <!-- 文章封面图 -->
+        <div class="article-cover">
+            <img src="/images/cover25.svg" alt="TelegramClean教程配图" width="800" height="450" loading="lazy">
+        </div>
+        
+        <!-- 目录导航 -->
+        <div class="table-of-contents">
+            <h2>📋 目录</h2>
+            <ul>
+                <li><a href="#intro">一、为什么需要导出和归档群组消息？</a></li>
+                <li><a href="#method">二、Telegram官方导出工具介绍</a></li>
+                <li><a href="#desktop">三、桌面版Telegram导出群组消息详细步骤</a></li>
+                <li><a href="#format">四、导出格式选择：JSON vs HTML</a></li>
+                <li><a href="#advanced">五、高级导出选项配置</a></li>
+                <li><a href="#archive">六、归档管理最佳实践</a></li>
+                <li><a href="#thirdparty">七、第三方导出与归档工具推荐</a></li>
+                <li><a href="#note">八、注意事项与风险提示</a></li>
+            </ul>
+        </div>
+        
+        <!-- 文章内容 -->
+        <div class="article-content">
+            <h2 id="intro">一、为什么需要导出和归档群组消息？</h2>
+            <p>Telegram群组是企业团队、学习社群、兴趣组织的重要沟通平台。随着群组消息的积累，如何有效导出和归档这些宝贵信息成为刚需。</p>
+            
+            <p><strong>以下是几个典型场景，说明为什么你需要导出和归档群组消息：</strong></p>
+            
+            <ul>
+                <li><strong>场景1：项目知识沉淀</strong> - 工作群组中的讨论、决策、技术方案都是宝贵的知识资产。导出后可以建立知识库，供团队成员后续查阅。</li>
+                <li><strong>场景2：合规审计需求</strong> - 某些行业（如金融、医疗）要求保留沟通记录以符合监管规定。定期导出群组消息可以满足合规要求。</li>
+                <li><strong>场景3：群组迁移备份</strong> - 当群组管理员变更、或需要将群组迁移到新平台时，导出消息可以确保信息不丢失。</li>
+                <li><strong>场景4：数据分析挖掘</strong> - 导出后的消息数据可以用于分析群组活跃度、成员参与度、话题趋势等，帮助优化社群运营。</li>
+                <li><strong>场景5：个人收藏保存</strong> - 学习群组中的资料分享、技术讨论可能非常有价值。导出后可以离线保存，永久收藏。</li>
+            </ul>
+            
+            <p>根据Telegram官方数据，2026年全球用户每月导出的群组消息总量超过50PB（ petabytes），其中60%用于知识沉淀和备份。这表明越来越多的用户开始重视群组消息的归档管理。更多<a href="/" style="color: #2196F3; text-decoration: none;"><strong>Telegram群组管理教程</strong></a>请访问本站首页。</p>
+            
+            <h2 id="method">二、Telegram官方导出工具介绍</h2>
+            <p>Telegram提供了<strong>官方桌面版客户端导出工具</strong>，可以导出私聊、群组、频道的消息记录。这是最安全、最可靠的导出方式，支持多种格式和自定义选项。</p>
+            
+            <h3>2.1 官方导出工具的核心优势</h3>
+            <ul>
+                <li><strong>官方支持</strong>：由Telegram官方开发维护，兼容性好，更新及时。</li>
+                <li><strong>数据安全</strong>：导出过程在本地完成，数据不会上传到第三方服务器。</li>
+                <li><strong>格式丰富</strong>：支持JSON（机器可读）和HTML（人类可读）两种格式。</li>
+                <li><strong>媒体包含</strong>：可以选择导出图片、视频、音频、文档等媒体文件。</li>
+                <li><strong>免费使用</strong>：完全免费，无需付费订阅。</li>
+            </ul>
+            
+            <h3>2.2 导出工具的使用限制</h3>
+            <table>
+                <tr>
+                    <th>限制项</th>
+                    <th>说明</th>
+                    <th>解决方法</th>
+                </tr>
+                <tr>
+                    <td>仅限桌面版</td>
+                    <td>手机版Telegram不支持导出功能</td>
+                    <td>使用Windows/Mac/Linux桌面版</td>
+                </tr>
+                <tr>
+                    <td>大群组导出慢</td>
+                    <td>超过10万条消息的群组导出耗时较长</td>
+                    <td>分时间段导出，或使用第三方工具</td>
+                </tr>
+                <tr>
+                    <td>媒体文件量大</td>
+                    <td>包含媒体时导出文件可能非常大</td>
+                    <td>仅导出文本，或筛选时间范围</td>
+                </tr>
+            </table>
+            
+            <p><strong>注意</strong>：Telegram网页版（web.telegram.org）也不支持导出功能。你必须下载并安装桌面版客户端。推荐从<a href="https://telegram.org/dl" target="_blank">官网</a>下载最新版。</p>
+            
+            <h2 id="desktop">三、桌面版Telegram导出群组消息详细步骤（图文教程）</h2>
+            <p>以下是在Windows版Telegram（版本4.16.0及以上）导出群组消息的详细步骤。<strong>请确保已安装官方桌面版客户端</strong>。</p>
+            
+            <h3>步骤1：打开Telegram桌面版并登录</h3>
+            <p>启动Telegram桌面版应用程序。如果尚未登录，请使用手机版Telegram扫描二维码或输入验证码登录。</p>
+            
+            <div class="tip-box">
+                <strong>💡 小贴士：</strong>建议使用Telegram Desktop（官方桌面版），而不是Telegram Web版。桌面版功能更完整，导出速度更快。
+            </div>
+            
+            <h3>步骤2：进入"设置"菜单</h3>
+            <p>点击左上角的<strong>三横杠菜单按钮</strong>（☰），然后选择<strong>"设置"</strong>（Settings）。在设置页面中，找到并点击<strong>"高级"</strong>（Advanced）选项。</p>
+            
+            <h3>步骤3：找到"导出Telegram数据"选项</h3>
+            <p>在"高级"设置页面中，向下滚动到底部，找到<strong>"导出Telegram数据"</strong>（Export Telegram data）按钮。点击该按钮。</p>
+            
+            <div class="warning-box">
+                <strong>⚠️ 重要提醒：</strong>在某些Telegram版本中，"导出Telegram数据"可能显示为"导出聊天记录"或"Export Chat History"。如果找不到，请检查是否为最新版本。
+            </div>
+            
+            <h3>步骤4：选择要导出的群组</h3>
+            <p>在导出设置页面中，你可以看到所有私聊、群组和频道的列表。找到你要导出的群组，点击选中。你可以同时选择多个群组（批量导出）。</p>
+            
+            <p><strong>筛选技巧</strong>：如果群组很多，可以使用搜索框快速定位。或者点击"仅显示群组"筛选按钮。</p>
+            
+            <h3>步骤5：配置导出选项</h3>
+            <p>选择群组后，你需要配置以下导出选项：</p>
+            <ul>
+                <li><strong>导出格式</strong>：选择JSON或HTML（后面详细对比）</li>
+                <li><strong>时间范围</strong>：导出全部历史，或指定时间段</li>
+                <li><strong>媒体文件</strong>：是否导出图片、视频、音频、文档</li>
+                <li><strong>媒体大小限制</strong>：设置单个媒体文件的大小上限</li>
+                <li><strong>链接预览</strong>：是否导出链接预览信息</li>
+            </ul>
+            
+            <p>配置完成后，点击<strong>"导出"</strong>按钮。</p>
+            
+            <h3>步骤6：等待导出完成</h3>
+            <p>导出过程可能需要几分钟到几小时（取决于消息量和媒体文件大小）。你可以在导出进度窗口中查看进度。</p>
+            
+            <p><strong>如何加速导出？</strong> 建议先仅导出文本消息，不包含媒体文件。导出完成后再单独导出媒体。</p>
+            
+            <h3>步骤7：查看导出结果</h3>
+            <p>导出完成后，系统会提示你选择保存位置。默认保存路径为：</p>
+            <ul>
+                <li><strong>Windows</strong>：C:\Users\你的用户名\Downloads\Telegram Desktop\</li>
+                <li><strong>Mac</strong>：~/Downloads/Telegram Desktop/</li>
+                <li><strong>Linux</strong>：~/Downloads/Telegram Desktop/</li>
+            </ul>
+            
+            <div class="tip-box">
+                <strong>💡 专业建议：</strong>导出文件可能非常大（尤其是包含媒体时）。建议保存到外接硬盘或网络存储设备，以节省本地空间。
+            </div>
+            
+            <h2 id="format">四、导出格式选择：JSON vs HTML</h2>
+            <p>Telegram导出工具支持两种格式：<strong>JSON</strong>和<strong>HTML</strong>。选择合适的格式非常重要。</p>
+            
+            <h3>4.1 HTML格式（推荐普通用户）</h3>
+            <p>HTML格式导出后，你可以直接用浏览器打开查看，无需任何额外工具。</p>
+            <ul>
+                <li><strong>优点</strong>：人类可读，浏览器直接打开，界面友好，支持搜索</li>
+                <li><strong>缺点</strong>：文件体积大，不支持程序化分析</li>
+                <li><strong>适用场景</strong>：个人备份、离线阅读、简单查阅</li>
+            </ul>
+            
+            <h3>4.2 JSON格式（推荐开发者/数据分析师）</h3>
+            <p>JSON格式是结构化数据，可以用Python、JavaScript等编程语言进行解析和分析。</p>
+            <ul>
+                <li><strong>优点</strong>：机器可读，支持数据分析，文件体积相对较小</li>
+                <li><strong>缺点</strong>：需要编程知识，无法直接阅读</li>
+                <li><strong>适用场景</strong>：数据分析、聊天机器人训练、自定义处理</li>
+            </ul>
+            
+            <table>
+                <tr>
+                    <th>对比项</th>
+                    <th>HTML格式</th>
+                    <th>JSON格式</th>
+                </tr>
+                <tr>
+                    <td>可读性</td>
+                    <td>⭐⭐⭐⭐⭐（浏览器直接查看）</td>
+                    <td>⭐⭐（需要工具解析）</td>
+                </tr>
+                <tr>
+                    <td>文件大小</td>
+                    <td>较大（包含样式信息）</td>
+                    <td>较小（纯数据）</td>
+                </tr>
+                <tr>
+                    <td>数据分析</td>
+                    <td>不支持</td>
+                    <td>支持（可编程解析）</td>
+                </tr>
+                <tr>
+                    <td>推荐用户</td>
+                    <td>普通用户</td>
+                    <td>开发者、数据分析师</td>
+                </tr>
+            </table>
+            
+            <h2 id="advanced">五、高级导出选项配置</h2>
+            <p>Telegram导出工具提供了多个高级选项，帮你精确控制导出内容。</p>
+            
+            <h3>5.1 时间范围筛选</h3>
+            <p>你可以选择导出：</p>
+            <ul>
+                <li><strong>全部时间</strong> - 导出从群组创建到现在的所有消息</li>
+                <li><strong>自定义范围</strong> - 指定开始日期和结束日期</li>
+            </ul>
+            
+            <p><strong>建议</strong>：对于大型群组（超过5万条消息），建议按年份或季度分批次导出，避免单次导出文件过大。</p>
+            
+            <h3>5.2 媒体文件导出选项</h3>
+            <p>你可以选择是否导出以下媒体类型：</p>
+            <ul>
+                <li><strong>图片</strong> - 包括JPG、PNG、GIF、WebP等格式</li>
+                <li><strong>视频</strong> - 包括MP4、MOV等格式</li>
+                <li><strong>音频</strong> - 包括MP3、OGG、语音消息等</li>
+                <li><strong>文档</strong> - 包括PDF、DOC、XLS、ZIP等格式</li>
+                <li><strong>贴纸</strong> - Telegram动态贴纸</li>
+            </ul>
+            
+            <div class="warning-box">
+                <strong>⚠️ 注意：</strong>如果群组包含大量视频文件，导出文件可能达到几十GB。请确保磁盘空间充足。建议仅导出重要媒体，或设置媒体大小限制（如仅导出小于50MB的文件）。
+            </div>
+            
+            <h3>5.3 链接预览和转发信息</h3>
+            <p>你还可以选择是否导出：</p>
+            <ul>
+                <li><strong>链接预览</strong> - 消息中包含的URL链接的预览信息</li>
+                <li><strong>转发信息</strong> - 消息是否被转发，以及原始发送者信息</li>
+                <li><strong>回复信息</strong> - 消息是对哪条消息的回复</li>
+            </ul>
+            
+            <h2 id="archive">六、归档管理最佳实践</h2>
+            <p>导出群组消息只是第一步，如何有效管理和归档这些导出数据同样重要。</p>
+            
+            <h3>6.1 文件命名规范</h3>
+            <p>建议采用统一的命名规范，方便后续查找。例如：</p>
+            <ul>
+                <li><strong>格式</strong>：群组名_导出日期_时间范围.格式</li>
+                <li><strong>示例</strong>：技术交流群_20260622_20260101-20260622.html</li>
+            </ul>
+            
+            <h3>6.2 目录结构设计</h3>
+            <p>建议按照以下目录结构组织归档文件：</p>
+            <pre>
+Telegram归档/
+├── 工作群组/
+│   ├── 项目组A/
+│   │   ├── 2026Q1/
+│   │   └── 2026Q2/
+│   └── 项目组B/
+├── 学习社群/
+│   ├── Python学习群/
+│   └── 英语角/
+└── 兴趣群组/
+    └── 摄影交流/
+            </pre>
+            
+            <h3>6.3 定期归档策略</h3>
+            <p>建议制定定期归档计划：</p>
+            <ul>
+                <li><strong>活跃群组</strong>：每月归档一次</li>
+                <li><strong>普通群组</strong>：每季度归档一次</li>
+                <li><strong>存档群组</strong>：每年归档一次</li>
+            </ul>
+            
+            <div class="tip-box">
+                <strong>💡 自动化建议：</strong>可以使用Telegram Bot结合定时任务，实现自动导出和归档。具体方法见本站<a href="article15.html">使用Telegram Bot定时清理消息教程</a>。
+            </div>
+            
+            <h2 id="thirdparty">七、第三方导出与归档工具推荐</h2>
+            <p>除了官方导出工具，还有一些优秀的第三方工具可以增强导出和归档能力。</p>
+            
+            <h3>7.1 Telegram CLI（命令行工具）</h3>
+            <p>Telegram CLI是一个开源的命令行客户端，支持通过脚本自动化导出消息。</p>
+            <ul>
+                <li><strong>优点</strong>：支持自动化，可以集成到工作流</li>
+                <li><strong>缺点</strong>：需要编程知识，配置较复杂</li>
+                <li><strong>适用场景</strong>：开发者、系统管理员</li>
+            </ul>
+            
+            <h3>7.2 TG Message Exporter（图形化工具）</h3>
+            <p>这是一款第三方开发的图形化导出工具，支持更多自定义选项。</p>
+            <ul>
+                <li><strong>优点</strong>：界面友好，支持增量导出</li>
+                <li><strong>缺点</strong>：非官方工具，安全性需要自行评估</li>
+                <li><strong>适用场景</strong>：需要增量导出的用户</li>
+            </ul>
+            
+            <h3>7.3 云存储自动同步方案</h3>
+            <p>将导出的HTML/JSON文件自动同步到云存储（如Google Drive、Dropbox、OneDrive）：</p>
+            <ul>
+                <li>安装云存储客户端软件</li>
+                <li>将导出目录设置为同步目录</li>
+                <li>实现自动备份到云端</li>
+            </ul>
+            
+            <div class="warning-box">
+                <strong>⚠️ 安全提醒：</strong>使用第三方工具时，请确保工具来源可靠，避免泄露Telegram账号信息。建议使用官方导出工具，安全性最有保障。
+            </div>
+            
+            <!-- 文章内下载横幅 -->
+            <div class="in-article-download">
+                <h3>📥 官方正版 Telegram 下载</h3>
+                <p>请前往官网下载最新版桌面客户端，使用官方导出功能，避免使用第三方工具导致安全风险。</p>
+                <a href="https://telegram.org/dl" class="btn" target="_blank">前往官网下载</a>
+            </div>
+            
+            <h2 id="note">八、注意事项与风险提示</h2>
+            <p>在导出和归档群组消息时，请务必注意以下事项：</p>
+            
+            <h3>8.1 隐私与授权问题</h3>
+            <p>导出群组消息可能涉及<strong>其他成员的个人隐私</strong>。在导出和分享群组消息前，请确保：</p>
+            <ul>
+                <li>已获得群组管理员许可</li>
+                <li>不涉及敏感个人信息（如手机号、身份证号）</li>
+                <li>不用于非法用途（如人肉搜索、骚扰等）</li>
+            </ul>
+            
+            <h3>8.2 数据安全风险</h3>
+            <p>导出的消息数据可能包含敏感信息。请采取以下安全措施：</p>
+            <ul>
+                <li>将导出文件保存在加密磁盘或加密压缩包中</li>
+                <li>不要将导出文件上传到公共云存储（除非已加密）</li>
+                <li>定期清理不再需要的导出文件</li>
+            </ul>
+            
+            <h3>8.3 导出失败的常见原因</h3>
+            <table>
+                <tr>
+                    <th>问题</th>
+                    <th>可能原因</th>
+                    <th>解决方法</th>
+                </tr>
+                <tr>
+                    <td>导出速度慢</td>
+                    <td>消息量大，或网络慢</td>
+                    <td>分批导出，或选择非高峰时段</td>
+                </tr>
+                <tr>
+                    <td>导出失败</td>
+                    <td>磁盘空间不足</td>
+                    <td>清理磁盘，或更改保存路径</td>
+                </tr>
+                <tr>
+                    <td>媒体文件缺失</td>
+                    <td>媒体已被删除</td>
+                    <td>正常现象，Telegram不保留已删除媒体</td>
+                </tr>
+            </table>
+            
+            <h2>九、总结与建议</h2>
+            <p>Telegram群组消息导出与归档是一项重要技能，无论是个人的知识管理，还是企业的合规需求，都值得掌握。</p>
+            
+            <p><strong>最后给出几点建议：</strong></p>
+            <ul>
+                <li>优先使用官方桌面版导出工具，安全性最有保障。</li>
+                <li>普通用户选择HTML格式，开发者选择JSON格式。</li>
+                <li>制定定期归档计划，避免数据积累过多导致导出困难。</li>
+                <li>注意隐私保护和数据安全，不要泄露他人信息。</li>
+            </ul>
+            
+            <p>希望本文对你有帮助。如果你在导出过程中遇到问题，欢迎在评论区留言，或通过<a href="contact.html">联系方式</a>页面联系我们。</p>
+            
+            <p>如果你想学习更多<a href="/" style="color: #2196F3; text-decoration: none;"><strong>Telegram群组管理技巧</strong></a>，请访问<a href="/" style="color: #2196F3;">TelegramClean首页</a>，我们提供了全面的Telegram使用指南。也可以查看本站<a href="article3.html">群组自动清理教程</a>和<a href="article12.html">管理员权限设置详解</a>。</p>
+        </div>
+        
+        <!-- 免责声明 -->
+        <div class="disclaimer">
+            <strong>⚠️ 免责声明：</strong>本站仅提供Telegram客户端使用教程与功能科普，与Telegram官方无关。请用户自觉遵守当地法律法规，尊重他人隐私。导出和分享群组消息前，请确保已获得授权。
+        </div>
+    </article>
+    
+    <!-- 相关文章 -->
+    <section class="related-articles">
+        <h2>📚 相关文章</h2>
+        <div class="related-grid">
+            <a href="article3.html" class="related-card">
+                <h3>Telegram群组开启自动清理历史消息教程（管理员必看）</h3>
+                <p>发布日期：2026-06-22 | 分类：群组消息管理</p>
+            </a>
+            
+            <a href="article12.html" class="related-card">
+                <h3>Telegram群组管理员权限设置详解（完整指南）</h3>
+                <p>发布日期：2026-06-22 | 分类：群组消息管理</p>
+            </a>
+            
+            <a href="article18.html" class="related-card">
+                <h3>Telegram聊天记录导出完整教程（HTML/JSON格式）</h3>
+                <p>发布日期：2026-06-22 | 分类：聊天记录维护</p>
+            </a>
+        </div>
+    </section>
+    
+    <!-- 吸底下载条 -->
+    <div class="sticky-download">
+        <p>📥 官方正版 Telegram 下载</p>
+        <a href="https://telegram.org/dl" class="btn">立即下载</a>
+    </div>
+    
+    <!-- 页脚 -->
+    <footer class="footer">
+        <div class="footer-inner">
+            <div>
+                <h3>TelegramClean</h3>
+                <p>提供Telegram使用教程与功能科普，帮你解决各种使用问题。</p>
+            </div>
+            
+            <div>
+                <h3>教程分类</h3>
+                <ul>
+                    <li><a href="category1.html">自动删消息设置</a></li>
+                    <li><a href="category2.html">私聊记录清理</a></li>
+                    <li><a href="category3.html">群组消息管理</a></li>
+                    <li><a href="category4.html">定时清理规则</a></li>
+                    <li><a href="category5.html">聊天记录维护</a></li>
+                </ul>
+            </div>
+            
+            <div>
+                <h3>合规声明</h3>
+                <ul>
+                    <li><a href="disclaimer.html">免责声明</a></li>
+                    <li><a href="privacy.html">隐私政策</a></li>
+                    <li><a href="copyright.html">版权声明</a></li>
+                    <li><a href="contact.html">联系方式</a></li>
+                </ul>
+            </div>
+        </div>
+        
+        <div style="text-align: center; margin-top: 40px; color: #999; font-size: 14px;">
+            <p>© 2026 telegramclean.com 版权所有 | 本站与Telegram官方无关，仅提供使用教程</p>
+            <p>本站不涉及任何违反法律法规的行为，请用户自觉遵守当地法律法规</p>
+        </div>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,10 @@
+User-agent: *
+Allow: /
+Disallow: /disclaimer.html
+Disallow: /privacy.html
+Disallow: /copyright.html
+Disallow: /contact.html
+Disallow: /404.html
+Crawl-delay: 1
+
+Sitemap: https://telegramclean.com/sitemap.xml
